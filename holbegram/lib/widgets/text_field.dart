@@ -1,4 +1,22 @@
-  @override
+import 'package:flutter/material.dart';
+
+class TextFieldInput extends StatelessWidget {
+  final TextEditingController controller;
+  final bool isPassword;
+  final String hintText;
+  final Widget? suffixIcon;
+  final TextInputType keyboardType;
+
+  const TextFieldInput({
+    super.key,
+    required this.controller,
+    required this.isPassword,
+    required this.hintText,
+    this.suffixIcon,
+    required this.keyboardType,
+  });
+
+@override
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
